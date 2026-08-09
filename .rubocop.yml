@@ -1,0 +1,35 @@
+AllCops:
+  TargetRubyVersion: 3.2
+  NewCops: enable
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+# 日本語のプロンプト・ログメッセージを多く含むため行長は制限しない
+Layout/LineLength:
+  Enabled: false
+
+# 多段フェーズのパイプラインとJSONスキーマ定義は分割すると却って読みにくいため緩める
+Metrics/MethodLength:
+  Max: 60
+
+Metrics/AbcSize:
+  Max: 55
+
+# Phase 3.5 などフェーズ番号を名前に含めるため
+Naming/VariableNumber:
+  AllowedPatterns:
+    - "phase\\d"
+
+Metrics/ClassLength:
+  Max: 400
+
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+$stdout.sync = true
+
+require "news_timeline"
+require "news_timeline/cli"
+
+exit NewsTimeline::CLI.start(ARGV)
